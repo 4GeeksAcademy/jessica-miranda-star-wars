@@ -1,11 +1,30 @@
 // Import necessary components from react-router-dom and other parts of the application.
 import { Link } from "react-router-dom";
 import useGlobalReducer from "../hooks/useGlobalReducer";  // Custom hook for accessing the global state.
-import { CardPeople } from "../components/CardPeople.jsx";
+import { CardPeople } from "../components/CardPeople.jsx"; 
 
 export const Starwars = () => {
   // Access the global state and dispatch function using the useGlobalReducer hook.
-  //const { store, dispatch } = useGlobalReducer()
+  const { store, dispatch } = useGlobalReducer()
+
+  async function  cartaPersonajes(){ 
+    try {
+      const response = await fetch("https://www.swapi.tech/api/people/"); 
+      if (!response.ok) {
+        throw new Error("Error al obtener personajes: ${response.statusText}")
+      }
+
+      const data = await response.json()
+      const personajesBasicos = data.results; 
+      dispatch({
+        type: "set_personajes", 
+        payload: {personajes:personajesBasicos}
+      })
+
+    } catch (error) {
+      console.error("Error en cargar personajes:", error)
+    }
+  }
 
    // fetch("https://www.swapi.tech/api/people/")
      //   .then(res => res.json())

@@ -11,7 +11,7 @@ export const CardPeople = ({people}) => {
                 <p className="card-text">
                     Click para ver más detalles de este personaje.
                 </p>
-                <Link to={`/people/${people.uid}`} className="btn btn-primary btn-sm">
+                <Link to={`/character/${people.uid}`} className="btn btn-primary btn-sm">
                     Ver detalles
                 </Link>
             </div>

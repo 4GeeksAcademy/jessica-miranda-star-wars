@@ -21,7 +21,7 @@ export const Starwars = () => {
         type: "set_personajes", 
         payload: {personajes:personajesBasicos}
       })
-
+ 
     } catch (error) {
       console.error("Error en cargar personajes:", error)
     }
@@ -36,12 +36,14 @@ useEffect(() => {
     <div className="container">
       <h2>Starwars</h2>
       <h3>People</h3>
-
-      {store.character.map((value, index) => {
+      <div className= "d-flex" style={{overflow: "auto"}}> 
+        {store.character?.map((value, index) => {
         return (
         <CardPeople key={index} people={value} /> 
       )
       })}
+
+      </div>
 
 
 

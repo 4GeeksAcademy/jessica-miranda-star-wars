@@ -12,7 +12,7 @@ export const Starwars = () => {
     try {
       const response = await fetch("https://www.swapi.tech/api/people/"); 
       if (!response.ok) {
-        throw new Error("Error al obtener personajes: ${response.statusText}")
+        throw new Error(`Error al obtener personajes: ${response.statusText}`)
       }
 
       const data = await response.json()
@@ -29,8 +29,7 @@ export const Starwars = () => {
 
 useEffect(() => {
   cartaPersonajes()
-
-})
+}, [])
 
 
   return (

@@ -1,20 +1,9 @@
-export const initialStore=()=>{
-  return{
-    message: null,
-    todos: [
-      {
-        id: 1,
-        title: "Make the bed",
-        background: null,
-      },
-      {
-        id: 2,
-        title: "Do my homework",
-        background: null,
-      }
-    ],
-    character:[] 
-  }
+export const initialStore = () => {
+    return {
+        message: null,
+        character: [],
+        favorites: []  
+    }
 }
 
 export default function storeReducer(store, action = {}) {
@@ -30,12 +19,10 @@ export default function storeReducer(store, action = {}) {
       };
 
     case 'set_personajes':
-      const {personaje} = action.payload
+      const {personajes} = action.payload
       return {
-        ...store, character:personaje
+        ...store, character:personajes
       } 
-
-
 
     default: 
       throw Error('Unknown action.');

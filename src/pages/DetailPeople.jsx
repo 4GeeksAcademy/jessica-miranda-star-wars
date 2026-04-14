@@ -15,10 +15,10 @@ async function  detallePersonaje(){
       }
 
       const data = await response.json()
-      const personajesDetalles = data.result.properties; 
+   
       dispatch({
-        type: "set_personajes_detalle", 
-        payload: {personajeDetalle: personajesDetalles}
+        type: "set_personaje_detalle", 
+        payload:  { personajeDetalle: data.result.properties }
       })
  
     } catch (error) {
@@ -31,24 +31,38 @@ async function  detallePersonaje(){
       detallePersonaje()
     }, [uid])
  
-    return (
-        <div className="container">
+  return (
+    <div className="container">
+      <div className="d-flex gap-4 mt-4">
 
-            <div className="card" style={{width: "18rem"}}>
-                <img src="..." className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                    </div>
-                    <ul className="list-group list-group-flush">
-                        <li className="list-group-item">An item</li>
-                        <li className="list-group-item">A second item</li>
-                        <li className="list-group-item">A third item</li>
-                    </ul>
-
-            </div>
-
-
+        {/* Tarjeta izquierda */}
+        <div className="card" style={{ minWidth: "300px" }}>
+          <img src={`https://raw.githubusercontent.com/breatheco-de/swapi-images/master/public/images/people/${uid}.jpg`} className="card-img-top" alt="" />
+          <div className="card-body">
+            <h5 className="card-title">{store.characterDetail?.name}</h5>
+            <p className="card-text">Detalles del personaje</p>
+          </div>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">Altura: {store.characterDetail?.height}</li>
+            <li className="list-group-item">Peso: {store.characterDetail?.mass}</li>
+            <li className="list-group-item">Género: {store.characterDetail?.gender}</li>
+            <li className="list-group-item">Año de nacimiento: {store.characterDetail?.birth_year}</li>
+            <li className="list-group-item">Color de ojos: {store.characterDetail?.eye_color}</li>
+          </ul>
         </div>
-    );
+
+        {/* Texto al lado derecho */}
+        <div className="d-flex flex-column justify-content-center">
+          <h2>{store.characterDetail?.name}</h2>
+          <p style={{ color: "#aaaaaa", lineHeight: "1.8" }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <p style={{ color: "#aaaaaa", lineHeight: "1.8" }}>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  );
 }; 

@@ -53,21 +53,42 @@ export const Starwars = () => {
       <h2>Starwars</h2>
 
       <h3>People</h3>
-      <div className="d-flex" style={{ overflow: "auto" }}> 
+      <div className="d-flex" style={{
+        overflowX: "auto",        /* 👈 scroll horizontal */
+        overflowY: "hidden",
+        paddingBottom: "1rem",
+        gap: "0.5rem",
+        scrollbarWidth: "thin",              /* Firefox */
+        scrollbarColor: "#FFE81F #0a0a1a"   /* Firefox */
+      }}>
         {store.character?.map((value, index) => (
-          <CardPeople key={index} people={value} /> 
+          <CardPeople key={index} people={value} />
         ))}
       </div>
 
       <h3>Planets</h3>
-      <div className="d-flex" style={{ overflow: "auto" }}>   
+      <div className="d-flex" style={{
+        overflowX: "auto",        /* 👈 scroll horizontal */
+        overflowY: "hidden",
+        paddingBottom: "1rem",
+        gap: "0.5rem",
+        scrollbarWidth: "thin",              /* Firefox */
+        scrollbarColor: "#FFE81F #0a0a1a"   /* Firefox */
+      }}>  
         {store.planets?.map((value, index) => (
           <CardPlanets key={index} planet={value} />
         ))}
       </div>
 
       <h3>Vehicles</h3>
-      <div className="d-flex" style={{ overflow: "auto" }}>
+      <div className="d-flex" style={{
+        overflowX: "auto",        /* 👈 scroll horizontal */
+        overflowY: "hidden",
+        paddingBottom: "1rem",
+        gap: "0.5rem",
+        scrollbarWidth: "thin",              /* Firefox */
+        scrollbarColor: "#FFE81F #0a0a1a"   /* Firefox */
+      }}>
         {store.vehicles?.map((value, index) => (
           <CardVehicles key={index} vehicle={value} />
         ))}

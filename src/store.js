@@ -32,6 +32,26 @@ export default function storeReducer(store, action = {}) {
       }
     }
 
+    case "add_favorite": {
+      const { favorite } = action.payload
+      return {
+        ...store,
+        favorites: [...store.favorites, favorite]
+      }
+    }
+
+    case "remove_favorite": {
+      const { uid } = action.payload
+      return {
+        ...store,
+        favorites: store.favorites.filter((fav) => fav.uid !== uid)
+      }
+    }
+
+    case "delete-fav": {
+
+    }
+
     default: 
       return store;
 

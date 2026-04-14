@@ -54,12 +54,12 @@ export const Starwars = () => {
 
       <h3>People</h3>
       <div className="d-flex" style={{
-        overflowX: "auto",        /* 👈 scroll horizontal */
+        overflowX: "auto",        /*  scroll horizontal */
         overflowY: "hidden",
         paddingBottom: "1rem",
         gap: "0.5rem",
         scrollbarWidth: "thin",              /* Firefox */
-        scrollbarColor: "#FFE81F #0a0a1a"   /* Firefox */
+        scrollbarColor: "#f50c0cd0 #0a0a1a"   /* Firefox */
       }}>
         {store.character?.map((value, index) => (
           <CardPeople key={index} people={value} />
@@ -68,12 +68,12 @@ export const Starwars = () => {
 
       <h3>Planets</h3>
       <div className="d-flex" style={{
-        overflowX: "auto",        /* 👈 scroll horizontal */
+        overflowX: "auto",        /*  scroll horizontal */
         overflowY: "hidden",
         paddingBottom: "1rem",
         gap: "0.5rem",
         scrollbarWidth: "thin",              /* Firefox */
-        scrollbarColor: "#FFE81F #0a0a1a"   /* Firefox */
+        scrollbarColor: "#ff1f1fd6 #0a0a1a"   /* Firefox */
       }}>  
         {store.planets?.map((value, index) => (
           <CardPlanets key={index} planet={value} />
@@ -82,12 +82,12 @@ export const Starwars = () => {
 
       <h3>Vehicles</h3>
       <div className="d-flex" style={{
-        overflowX: "auto",        /* 👈 scroll horizontal */
+        overflowX: "auto",       
         overflowY: "hidden",
         paddingBottom: "1rem",
         gap: "0.5rem",
-        scrollbarWidth: "thin",              /* Firefox */
-        scrollbarColor: "#FFE81F #0a0a1a"   /* Firefox */
+        scrollbarWidth: "thin",              
+        scrollbarColor: "#e90404da #040404d4"   
       }}>
         {store.vehicles?.map((value, index) => (
           <CardVehicles key={index} vehicle={value} />

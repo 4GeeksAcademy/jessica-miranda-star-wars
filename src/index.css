@@ -4,41 +4,41 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #0a0a1a;
+  background-color: #000000;
   background-image: 
-    radial-gradient(ellipse at center, #1a1a3e 0%, #0a0a1a 70%),
+    radial-gradient(ellipse at center, #422828 0%, #000000 70%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Crect width='400' height='400' fill='transparent'/%3E%3Ccircle cx='50' cy='80' r='1' fill='white' opacity='0.8'/%3E%3Ccircle cx='120' cy='30' r='1.5' fill='white' opacity='0.6'/%3E%3Ccircle cx='200' cy='150' r='1' fill='white' opacity='0.9'/%3E%3Ccircle cx='300' cy='60' r='1' fill='white' opacity='0.7'/%3E%3Ccircle cx='350' cy='200' r='1.5' fill='white' opacity='0.5'/%3E%3Ccircle cx='80' cy='250' r='1' fill='white' opacity='0.8'/%3E%3Ccircle cx='160' cy='320' r='1' fill='white' opacity='0.6'/%3E%3Ccircle cx='250' cy='280' r='1.5' fill='white' opacity='0.9'/%3E%3Ccircle cx='380' cy='350' r='1' fill='white' opacity='0.7'/%3E%3Ccircle cx='30' cy='370' r='1' fill='white' opacity='0.5'/%3E%3Ccircle cx='320' cy='130' r='1' fill='white' opacity='0.8'/%3E%3Ccircle cx='100' cy='180' r='1.5' fill='white' opacity='0.6'/%3E%3Ccircle cx='220' cy='50' r='1' fill='white' opacity='0.9'/%3E%3Ccircle cx='370' cy='280' r='1' fill='white' opacity='0.7'/%3E%3Ccircle cx='140' cy='390' r='1.5' fill='white' opacity='0.5'/%3E%3C/svg%3E");
   background-size: cover, 400px 400px;
   font-family: 'Orbitron', sans-serif;
-  color: #e0e0e0;
+  color: #f3e9e9;
 }
 
-/* Títulos */
+
 h1, h2, h3 {
-  color: #FFE81F;
-  text-shadow: 0 0 20px rgba(255, 232, 31, 0.5);
+  color: #ff1f1fcc;
+  text-shadow: 0 0 20px rgba(246, 246, 245, 0.5);
   letter-spacing: 2px;
 }
 
-/* Navbar */
+
 .navbar {
-  background-color: rgba(0, 0, 0, 0.85) !important;
-  border-bottom: 1px solid #FFE81F;
+  background-color: rgba(5, 5, 6, 0.839) !important;
+  border-bottom: 1px solid #ff1f1f;
   backdrop-filter: blur(10px);
 }
 
 .navbar-brand {
-  color: #FFE81F !important;
+  color: #ff1f1f !important;
   font-family: 'Orbitron', sans-serif;
   font-weight: 900;
   font-size: 1.5rem;
-  text-shadow: 0 0 10px rgba(255, 232, 31, 0.8);
+  text-shadow: 0 0 10px rgba(234, 232, 228, 0.8);
 }
 
-/* Tarjetas */
+
 .card {
-  background-color: rgba(10, 10, 30, 0.85) !important;
-  border: 1px solid rgba(255, 232, 31, 0.3) !important;
+  background-color: rgba(0, 0, 0, 0.972) !important;
+  border: 1px solid rgba(239, 231, 231, 0.3) !important;
   color: #e0e0e0 !important;
   transition: transform 0.2s, box-shadow 0.2s;
   margin: 0.5rem;
@@ -54,32 +54,32 @@ h1, h2, h3 {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(255, 232, 31, 0.3) !important;
-  border-color: #FFE81F !important;
+  box-shadow: 0 10px 35px rgba(255, 255, 255, 0.3) !important;
+  border-color: #fdfdfd !important;
 }
 
 .card-title {
-  color: #FFE81F !important;
+  color: #ff1f1fb9 !important;
   font-weight: 700;
 }
 
 .card-text {
-  color: #aaaaaa !important;
+  color: #f0eaeadf !important;
   font-size: 0.8rem;
 }
 
-/* List group dentro de cards */
+
 .list-group-item {
-  background-color: rgba(10, 10, 30, 0.9) !important;
-  border-color: rgba(255, 232, 31, 0.2) !important;
+  background-color: rgba(5, 5, 5, 0.9) !important;
+  border-color: rgba(241, 240, 236, 0.2) !important;
   color: #e0e0e0 !important;
   font-size: 0.85rem;
 }
 
-/* Dropdown de favoritos */
+
 .dropdown-menu {
-  background-color: #0a0a1a !important;
-  border: 1px solid #FFE81F !important;
+  background-color: #0a0a0b !important;
+  border: 1px solid #ff1f1fd1 !important;
 }
 
 .dropdown-item {
@@ -90,11 +90,11 @@ h1, h2, h3 {
   background-color: rgba(255, 232, 31, 0.1) !important;
 }
 
-/* Botones minimalistas */
+
 .btn-primary {
   background: transparent !important;
   border: none !important;
-  color: #FFE81F !important;
+  color: #ff1f1fc4 !important;
   padding: 0 !important;
   font-size: 0.85rem !important;
   letter-spacing: 1px;
@@ -109,7 +109,7 @@ h1, h2, h3 {
 .btn-warning {
   background: transparent !important;
   border: none !important;
-  color: #FFE81F !important;
+  color: #ff1f1fcf !important;
   padding: 0 0 0 8px !important;
   font-size: 1rem !important;
 }
@@ -120,8 +120,8 @@ h1, h2, h3 {
 
 .btn-danger {
   background: transparent !important;
-  border: 1px solid #ff4444 !important;
-  color: #ff4444 !important;
+  border: 1px solid #ff4444cc !important;
+  color: #ff4444c1 !important;
   font-size: 0.85rem !important;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -129,6 +129,6 @@ h1, h2, h3 {
 }
 
 .btn-danger:hover {
-  background: #ff4444 !important;
+  background: #ff4444c1 !important;
   color: #ffffff !important;
 }

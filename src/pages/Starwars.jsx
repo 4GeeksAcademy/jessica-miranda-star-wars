@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import useGlobalReducer from "../hooks/useGlobalReducer";  // Custom hook for accessing the global state.
 import { CardPeople } from "../components/CardPeople.jsx"; 
+import React, {useEffect} from "react" 
 
 export const Starwars = () => {
   // Access the global state and dispatch function using the useGlobalReducer hook.
@@ -26,15 +27,26 @@ export const Starwars = () => {
     }
   }
 
-   // fetch("https://www.swapi.tech/api/people/")
-     //   .then(res => res.json())
-     //   .then(data => console.log(data.results))
-      //  .catch(err => console.error(err))
+useEffect(() => {
+  cartaPersonajes()
+
+})
+
 
   return (
     <div className="container">
       <h2>Starwars</h2>
-      <h3>People</h3> 
+      <h3>People</h3>
+
+      {store.character.map((value, index) => {
+        return (
+        <CardPeople key={index} people={value} /> 
+      )
+      })}
+
+
+
+
          <CardPeople/> 
 
       <h3>Planets</h3> 

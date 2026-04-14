@@ -4,6 +4,8 @@ export const initialStore = () => {
         character: [],
         favorites: [],  
         characterDetail: null,
+        planets: [],          
+        planetDetail: null, 
     }
 }
 
@@ -48,9 +50,25 @@ export default function storeReducer(store, action = {}) {
       }
     }
 
-    case "delete-fav": {
+    case 'set_planetas': {
+    const { planetas } = action.payload
+    return { ...store, planets: planetas }
+}
 
-    }
+case 'set_planeta_detalle': {
+    const { planetaDetalle } = action.payload
+    return { ...store, planetDetail: planetaDetalle }
+}
+
+case 'set_vehiculos': {
+    const { vehiculos } = action.payload
+    return { ...store, vehicles: vehiculos }
+}
+
+case 'set_vehiculo_detalle': {
+    const { vehiculoDetalle } = action.payload
+    return { ...store, vehicleDetail: vehiculoDetalle }
+}
 
     default: 
       return store;
